@@ -1,0 +1,8 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "string.h": "c",
+        "fcntl.h": "c",
+        "semaphore.h": "c"
+    }
+}
