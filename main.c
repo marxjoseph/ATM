@@ -1,9 +1,3 @@
-/*
-Joseph Marques 101218139
-Sam Micheal 101229942
-SYSC4001 Assignment 3
-This represents the ATM process
-*/
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
