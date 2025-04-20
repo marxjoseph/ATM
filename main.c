@@ -11,6 +11,8 @@
 #include <fcntl.h>
 #include <semaphore.h>
 #include <sys/sem.h>
+#include <signal.h>
+
 
 // States for ATM
 #define REQUESTACCOUNTNUMBERANDPINSTATE 0

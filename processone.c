@@ -171,7 +171,7 @@ int main(int argc, char *argv[]) {
 
    while(1) { // Wait till a message is going to be received
        if(msgrcv(msgid_db, &message_received, sizeof(message_received)-sizeof(long), 2, 0) != -1) { // Receive message of type 2 (indicating for processone)
-           if(message_received.purpose == CHECKACCOUNTNUMBERANDPIN) { // Check if purpose of comment was to verify account
+        if(message_received.purpose == CHECKACCOUNTNUMBERANDPIN) { // Check if purpose of comment was to verify account
                account_info_t *current = queue->front; // Will be used to loop
                sprintf(account_number, "%05d", message_received.account_number); // Convert to string as input was a number
                while(current != NULL) { // Loop looking for account number
@@ -181,6 +181,7 @@ int main(int argc, char *argv[]) {
                        account_info.pin = current->pin;
                        account_info.funds_available = current->funds_available;
                        account_info.next = NULL; // Next is not needed for this 
+                       printf("%d,%d", account_info.pin, message_received.pin - 1);
                        if(account_info.pin == (message_received.pin - 1)) { // Verify the pin with the encryption
                            message_received.purpose = OK; // If pin matches return ok
                        }
