@@ -9,7 +9,7 @@ gcc dbeditor.c -o dbeditor
 gcc processone.c -o processone
 To use main:
 ./main
-To use dbeditor must run main to fork processone and must run dbeditor:
+To use dbeditor must run main to fork processone and must run dbeditor (on seperate terminals):
 ./main
 ./dbeditor
 Note: After every run please make sure all processes related to this application are shut down or rerun won't work.
